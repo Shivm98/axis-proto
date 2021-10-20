@@ -1,0 +1,32 @@
+.chatbot {
+  min-height: 90%;
+  width: 40rem;
+  background-image: url("../../assets/background.png");
+  background-size: cover;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .header-container {
+    height: 5rem;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .body-container {
+    flex: 1;
+    width: 100%;
+  }
+
+  .footer-container {
+    height: 4rem;
+    background-color: transparent;
+    width: 100%;
+  }
+}

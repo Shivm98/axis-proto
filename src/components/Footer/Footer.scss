@@ -1,0 +1,63 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .input-container {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    input {
+      position: relative;
+      width: 100%;
+      padding: 0.3;
+      border-radius: 1.5rem;
+      border: none;
+      height: 100%;
+      background-color: #f0f0f0;
+    }
+
+    img {
+      position: absolute;
+      right: 1.5rem;
+
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .lang-selector {
+    height: 90%;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+
+    .btn {
+      height: 100%;
+      width: 2.5rem;
+      border: none;
+      outline: none;
+      border-radius: 0.3rem;
+      padding: 0.3rem;
+      font-size: 0.8rem;
+      background-color: transparent;
+      color: rgb(95, 95, 95);
+      cursor: pointer;
+    }
+
+    .btn.selected {
+      background-color: #e5095c;
+      color: #fff;
+    }
+  }
+}

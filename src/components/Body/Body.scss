@@ -1,0 +1,54 @@
+.body {
+  width: 100%;
+  height: 100%;
+
+  .messages {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .message {
+      display: flex;
+      gap: 1rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      align-items: center;
+      color: #282828;
+
+      .icon {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: #c4c4c4;
+      }
+
+      &.bot {
+        margin-right: auto;
+
+        .text {
+          border-radius: 1rem 1rem 1rem 0px;
+          background-color: #e6e6e6;
+          padding: 1.3rem 2.9rem 1.3rem 1.6rem;
+          max-width: max-content;
+        }
+      }
+
+      &.user {
+        margin-left: auto;
+        flex-direction: row-reverse;
+
+        .text {
+          border-radius: 1rem 1rem 0rem 1rem;
+          background-color: #fff;
+          padding: 1.3rem 2.9rem 1.3rem 1.6rem;
+          max-width: max-content;
+        }
+      }
+    }
+  }
+}
