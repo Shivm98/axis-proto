@@ -1,0 +1,58 @@
+.init {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+
+  .avatar {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: #ebf0f9;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .text-content {
+    .title {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    .text {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .banner {
+    width: 100%;
+    margin-top: 1rem;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .quick-links {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .link {
+      padding: 0.8rem;
+      background-color: white;
+      border-radius: 4rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+  }
+}

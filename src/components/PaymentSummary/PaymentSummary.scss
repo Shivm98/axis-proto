@@ -1,0 +1,75 @@
+.payment-summary {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  margin-top: 1rem;
+
+  &-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  &-content {
+    border-bottom: 1px solid #f1f1f1;
+    .transaction {
+      margin: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .head {
+        .title {
+          font-size: 1.3rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #282828;
+        }
+
+        .sub-title {
+          font-size: 1.1rem;
+          font-weight: 400;
+          color: #6e6e6e;
+          margin-top: 0.5rem;
+        }
+      }
+
+      .ammount {
+        color: #282828;
+        font-weight: bold;
+      }
+    }
+
+    .total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 1.3rem 0;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+  }
+
+  .desc {
+    margin-top: 1.5rem;
+    .title {
+      font-size: 1.3rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #282828;
+    }
+
+    .sub-title {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #6e6e6e;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .warning {
+    color: #ff2121;
+    font-size: 1rem;
+    background-color: #f9ebef;
+    padding: 0.2rem 0.8rem;
+    margin-top: 1.5rem;
+  }
+}

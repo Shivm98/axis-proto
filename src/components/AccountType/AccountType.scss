@@ -1,0 +1,23 @@
+.acc-type {
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+  background-color: #fff;
+  .title {
+    font-size: 1.3rem;
+    color: #323232;
+    background-color: #e6e6e6;
+    padding: 1.4rem 2.4rem 1.2rem 1.4rem;
+  }
+
+  .type {
+    color: #a90047;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1.4rem 2.4rem 1.2rem 1.4rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #f1f1f1;
+    }
+  }
+}
