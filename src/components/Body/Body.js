@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useGlobalContext } from "../../context/context";
 import AccountType from "../AccountType/AccountType";
+import BeneCard from "../BeneCard/BeneCard";
 import Init from "../Init/Init";
 import PaymentSuccess from "../PaymentSuccess/PaymentSuccess";
 import PaymentSummary from "../PaymentSummary/PaymentSummary";
@@ -21,14 +22,14 @@ const Body = () => {
           <Init click={hideInit} />
         ) : (
           <>
-            {allMessages.map((msg, index) => (
+            {/* {allMessages.map((msg, index) => (
               <div className={`message ${msg.sender}`} key={index}>
                 <div className="icon"></div>
                 <div className="text">{msg.text}</div>
               </div>
-            ))}
+            ))} */}
 
-            {/* <div className="message bot">
+            <div className="message bot">
               <div className="icon"></div>
 
               <div className="card">
@@ -40,7 +41,12 @@ const Body = () => {
             <div className="message bot">
               <div className="icon"></div>
               <AccountType />
-            </div> */}
+            </div>
+
+            <div className="message bot">
+              <div className="icon"></div>
+              <BeneCard />
+            </div>
           </>
         )}
       </div>
