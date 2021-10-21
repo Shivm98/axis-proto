@@ -1,0 +1,50 @@
+.acc-details {
+  background: #f1f4f7;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1.6rem;
+
+  &-icon {
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #282828;
+    margin-bottom: 0.6rem;
+  }
+
+  &-data {
+    color: #282828;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.2rem;
+
+    .left {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #1fc24e;
+
+      img {
+        margin-right: 0.4rem;
+      }
+    }
+
+    .right {
+      font-size: 1rem;
+      font-weight: normal;
+      color: #404040;
+    }
+  }
+}

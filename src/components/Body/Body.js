@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useGlobalContext } from "../../context/context";
 import AccountType from "../AccountType/AccountType";
+import AccoutDetailsCard from "../AccoutDetailsCard/AccoutDetailsCard";
 import BeneCard from "../BeneCard/BeneCard";
 import Init from "../Init/Init";
 import PaymentSuccess from "../PaymentSuccess/PaymentSuccess";
@@ -46,6 +47,11 @@ const Body = () => {
             <div className="message bot">
               <div className="icon"></div>
               <BeneCard />
+            </div>
+
+            <div className="message bot">
+              <div className="icon"></div>
+              <AccoutDetailsCard />
             </div>
           </>
         )}
