@@ -6,6 +6,7 @@ import BeneCard from "../BeneCard/BeneCard";
 import Init from "../Init/Init";
 import PaymentSuccess from "../PaymentSuccess/PaymentSuccess";
 import PaymentSummary from "../PaymentSummary/PaymentSummary";
+import RecentTrans from "../RecentTrans/RecentTrans";
 import "./Body.scss";
 
 const Body = () => {
@@ -52,6 +53,11 @@ const Body = () => {
             <div className="message bot">
               <div className="icon"></div>
               <AccoutDetailsCard />
+            </div>
+
+            <div className="message bot">
+              <div className="icon"></div>
+              <RecentTrans />
             </div>
           </>
         )}
