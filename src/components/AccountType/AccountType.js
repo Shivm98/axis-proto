@@ -1,12 +1,27 @@
 import React from "react";
 import "./AccountType.scss";
+import { useGlobalContext } from "../../context/context";
 
-const AccountType = () => {
+const AccountType = ({ title, options }) => {
+  const { addNewMessage } = useGlobalContext();
+
+  const addMessage = (e) => {
+    addNewMessage({
+      type: "message",
+      content: "savingsaccount",
+      text: "Savings Account",
+      sender: "user",
+    });
+  };
+
   return (
     <div className="acc-type">
       <div className="title">Please select A/C type</div>
-      <div className="type">Current A/C</div>
-      <div className="type">Saving A/C</div>
+      {options?.map((option, index) => (
+        <div className="type" onClick={addMessage} key={index}>
+          {option}
+        </div>
+      ))}
     </div>
   );
 };

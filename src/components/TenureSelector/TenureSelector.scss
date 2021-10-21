@@ -1,0 +1,38 @@
+.tenure-selector {
+  background-color: #fff;
+
+  &-top {
+    padding: 1.2rem;
+  }
+
+  &-title {
+    color: #282828;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  &-bottom {
+    width: 100%;
+  }
+
+  &-submit {
+    width: 100%;
+    background: #97144d;
+    border-radius: 0px 0px 8px 8px;
+    border: none;
+    padding: 0.8rem 0.8rem;
+
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+  }
+}

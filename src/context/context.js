@@ -1,21 +1,29 @@
 import React, { useState, useContext } from "react";
+import conversations from "../data/conversations";
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [allMessages, setAllMessages] = useState([
-    {
-      text: "hello",
-      sender: "bot",
-    },
-    {
-      text: "bye",
-      sender: "user",
-    },
-  ]);
+  const [allMessages, setAllMessages] = useState([]);
 
   const addNewMessage = (newMsg) => {
-    setAllMessages([...allMessages, { ...newMsg }]);
+    let messages = [...allMessages];
+    messages.push(newMsg);
+
+    if (newMsg.sender === "user") {
+      messages.push(conversations(newMsg.content));
+    }
+
+    // if (newMsg.text === "Order cheque book") {
+    //   messages.push();
+    // } else if (newMsg.text === "Savings Account") {
+    //   messages.push({
+    //     type: "card",
+    //     text: "",
+    //     sender: "bot",
+    //   });
+    // }
+    setAllMessages(messages);
   };
 
   return (

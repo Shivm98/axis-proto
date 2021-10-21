@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Init.scss";
 import banner from "../../assets/banner.png";
+import { useGlobalContext } from "../../context/context";
 
 const Init = ({ click }) => {
   const [quickLinks, selQuickLinks] = useState([
@@ -13,8 +14,20 @@ const Init = ({ click }) => {
     "Deposit",
     "ATM/Branch Locator",
     "Offers",
+    "Order cheque book",
   ]);
 
+  const { addNewMessage } = useGlobalContext();
+
+  const addMessage = (e) => {
+    click();
+    addNewMessage({
+      type: "message",
+      content: "orderchequebook",
+      text: "Order cheque book",
+      sender: "user",
+    });
+  };
   return (
     <div className="init">
       <div className="avatar"></div>
@@ -31,7 +44,7 @@ const Init = ({ click }) => {
 
       <div className="quick-links">
         {quickLinks.map((link, index) => (
-          <div className="link" onClick={click} key={index}>
+          <div className="link" onClick={addMessage} key={index}>
             {link}
           </div>
         ))}
