@@ -33,7 +33,14 @@ const conversations = (option) => {
         content: "savingsaccount",
         text: "Please confirm your order",
         sender: "bot",
-        card: <BeneCard textOnClick="continue" content="paymentsucess" />,
+        card: (
+          <BeneCard
+            textOnClick="continue"
+            content="paymentsucess"
+            title="Placeholder"
+            subtitle="placeholder"
+          />
+        ),
       };
       return message;
 
@@ -80,7 +87,14 @@ const conversations = (option) => {
         content: "fundtransfer",
         text: "Please select benificiary account",
         sender: "bot",
-        card: <BeneCard textOnClick="Person Name" content="entertheamout" />,
+        card: (
+          <BeneCard
+            textOnClick="Person Name"
+            content="entertheamout"
+            title="Person Name"
+            subtitle="bank name"
+          />
+        ),
       };
       return message;
 
@@ -177,6 +191,8 @@ const conversations = (option) => {
           <BeneCard
             textOnClick="Customize Deposit Tenure"
             content="selecttenure"
+            title="7% pa"
+            subtitle="placeholder"
           />
         ),
       };
