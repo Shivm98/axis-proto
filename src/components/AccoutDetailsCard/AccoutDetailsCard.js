@@ -4,14 +4,14 @@ import acIcon from "../../assets/icons/AC.svg";
 import angledArrow from "../../assets/icons/angled-arrow.svg";
 import { useGlobalContext } from "../../context/context";
 
-const AccoutDetailsCard = () => {
+const AccoutDetailsCard = ({ content, textOnClick }) => {
   const { addNewMessage } = useGlobalContext();
 
   const addMessage = () => {
     addNewMessage({
       type: "message",
-      content: "recenttrans",
-      text: "XXXX-0123",
+      content: content,
+      text: textOnClick,
       sender: "user",
     });
   };

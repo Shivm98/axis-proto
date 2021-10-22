@@ -1,15 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context/context";
-import conversations from "../../data/conversations";
-
-import AccoutDetailsCard from "../AccoutDetailsCard/AccoutDetailsCard";
-import BeneCard from "../BeneCard/BeneCard";
 import Init from "../Init/Init";
-import PaymentSuccess from "../PaymentSuccess/PaymentSuccess";
-import PaymentSummary from "../PaymentSummary/PaymentSummary";
-import RecentTrans from "../RecentTrans/RecentTrans";
-import SendEmailBtn from "../SendEmailBtn/SendEmailBtn";
-import TenureSelector from "../TenureSelector/TenureSelector";
 import "./Body.scss";
 
 const Body = () => {

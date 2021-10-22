@@ -1,10 +1,20 @@
 import React from "react";
 import "./TenureSelector.scss";
+import { useGlobalContext } from "../../context/context";
 
 import Selector from "../Selector/Selector";
-import { useState } from "react/cjs/react.development";
 
-const TenureSelector = () => {
+const TenureSelector = ({ textOnClick }) => {
+  const { addNewMessage } = useGlobalContext();
+
+  const addMessage = (e) => {
+    addNewMessage({
+      type: "message",
+      content: "nomineeforfd",
+      text: "1 Year 5 Months",
+      sender: "user",
+    });
+  };
   return (
     <div className="tenure-selector">
       <div className="tenure-selector-top">
@@ -16,7 +26,9 @@ const TenureSelector = () => {
         </div>
       </div>
       <div className="tenure-selector-bottom">
-        <button className="tenure-selector-submit">Submit Tenure</button>
+        <button className="tenure-selector-submit" onClick={addMessage}>
+          Submit Tenure
+        </button>
       </div>
     </div>
   );

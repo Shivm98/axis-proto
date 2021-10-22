@@ -2,14 +2,15 @@ import React from "react";
 import "./AccountType.scss";
 import { useGlobalContext } from "../../context/context";
 
-const AccountType = ({ title, options }) => {
+const AccountType = ({ title, options, textOnClick, content }) => {
   const { addNewMessage } = useGlobalContext();
 
   const addMessage = (e) => {
     addNewMessage({
       type: "message",
-      content: "savingsaccount",
-      text: "Savings Account",
+      content: content,
+      // text: "Savings Account",
+      text: textOnClick,
       sender: "user",
     });
   };

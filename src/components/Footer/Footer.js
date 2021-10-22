@@ -27,6 +27,62 @@ const Footer = () => {
           text: e.target.value,
           sender: "user",
         });
+      } else if (e.target.value === "fund transfer") {
+        addNewMessage({
+          type: "message",
+          content: "fundtransfer",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "50,000") {
+        addNewMessage({
+          type: "message",
+          content: "acctype",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "12345678") {
+        addNewMessage({
+          type: "message",
+          content: "paymentsucess",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "book fd") {
+        addNewMessage({
+          type: "message",
+          content: "selectfdplan",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "Rs. 5 Lakh") {
+        addNewMessage({
+          type: "message",
+          content: "interesttime",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "no") {
+        addNewMessage({
+          type: "message",
+          content: "fddetails",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "Proceed") {
+        addNewMessage({
+          type: "message",
+          content: "enterpannumber",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "XXXXXXXXXX") {
+        addNewMessage({
+          type: "message",
+          content: "paymentsucessemail",
+          text: e.target.value,
+          sender: "user",
+        });
       }
 
       console.log(("eee", e.target.value));
