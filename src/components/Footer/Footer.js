@@ -7,14 +7,27 @@ const Footer = () => {
   const [selectedLang, setSelectedLang] = useState("EN");
   const [currentMessage, setCurrentMessage] = useState("");
 
-  const { addNewMessage } = useGlobalContext();
+  const { addNewMessage, hideInit } = useGlobalContext();
 
   const addMessage = (e) => {
     if (e.key == "Enter") {
-      addNewMessage({
-        text: e.target.value,
-        sender: "user",
-      });
+      hideInit();
+
+      if (e.target.value === "order cheque book") {
+        addNewMessage({
+          type: "message",
+          content: "orderchequebook",
+          text: e.target.value,
+          sender: "user",
+        });
+      } else if (e.target.value === "show transactions") {
+        addNewMessage({
+          type: "message",
+          content: "showtransactions",
+          text: e.target.value,
+          sender: "user",
+        });
+      }
 
       console.log(("eee", e.target.value));
     }

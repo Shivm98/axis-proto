@@ -13,16 +13,11 @@ import TenureSelector from "../TenureSelector/TenureSelector";
 import "./Body.scss";
 
 const Body = () => {
-  const [showInit, setShowInit] = useState(true);
-
-  const { allMessages } = useGlobalContext();
-
-  const hideInit = () => {
-    setShowInit(false);
-  };
+  const { allMessages, hideInit, showInit } = useGlobalContext();
 
   const listMessages = () => {
     return allMessages.map((msg, index) => {
+      console.log(msg);
       if (msg.type === "message") {
         return (
           <div className={`message ${msg.sender}`} key={index}>
@@ -31,11 +26,22 @@ const Body = () => {
           </div>
         );
       } else if (msg.type === "card") {
-        console.log(msg);
         return (
-          <div className="message bot" key={index}>
-            <div className="icon"></div>
-            {msg.card}
+          <div
+            className={
+              msg.text ? "message bot text-and-card" : "message bot card"
+            }
+            key={index}
+          >
+            {msg.text ? (
+              <div className="text-content">
+                <div className="icon"></div>
+                <div className="text">{msg.text}</div>
+              </div>
+            ) : (
+              <div className="icon"></div>
+            )}
+            <div className="card-container">{msg.card}</div>
           </div>
         );
       }

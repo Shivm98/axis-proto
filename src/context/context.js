@@ -5,25 +5,22 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [allMessages, setAllMessages] = useState([]);
+  const [showInit, setShowInit] = useState(true);
 
   const addNewMessage = (newMsg) => {
     let messages = [...allMessages];
+    console.log("context---->>>>>> ", newMsg);
     messages.push(newMsg);
 
     if (newMsg.sender === "user") {
       messages.push(conversations(newMsg.content));
     }
 
-    // if (newMsg.text === "Order cheque book") {
-    //   messages.push();
-    // } else if (newMsg.text === "Savings Account") {
-    //   messages.push({
-    //     type: "card",
-    //     text: "",
-    //     sender: "bot",
-    //   });
-    // }
     setAllMessages(messages);
+  };
+
+  const hideInit = () => {
+    setShowInit(false);
   };
 
   return (
@@ -31,6 +28,8 @@ const AppProvider = ({ children }) => {
       value={{
         allMessages,
         addNewMessage,
+        hideInit,
+        showInit,
       }}
     >
       {children}

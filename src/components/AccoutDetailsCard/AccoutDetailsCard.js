@@ -2,11 +2,23 @@ import React from "react";
 import "./AccoutDetailsCard.scss";
 import acIcon from "../../assets/icons/AC.svg";
 import angledArrow from "../../assets/icons/angled-arrow.svg";
+import { useGlobalContext } from "../../context/context";
 
 const AccoutDetailsCard = () => {
+  const { addNewMessage } = useGlobalContext();
+
+  const addMessage = () => {
+    addNewMessage({
+      type: "message",
+      content: "recenttrans",
+      text: "XXXX-0123",
+      sender: "user",
+    });
+  };
+
   return (
     <div className="acc-details-container">
-      <div className="acc-details">
+      <div className="acc-details" onClick={addMessage}>
         <div className="acc-details-icon">
           <img src={acIcon} alt="ac-icon" />
         </div>
@@ -22,7 +34,7 @@ const AccoutDetailsCard = () => {
           <div className="right">20 min ago</div>
         </div>
       </div>
-      <div className="acc-details">
+      <div className="acc-details" onClick={addMessage}>
         <div className="acc-details-icon">
           <img src={acIcon} alt="ac-icon" />
         </div>
