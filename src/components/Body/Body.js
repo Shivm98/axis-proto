@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context/context";
 import conversations from "../../data/conversations";
 
@@ -13,7 +13,16 @@ import TenureSelector from "../TenureSelector/TenureSelector";
 import "./Body.scss";
 
 const Body = () => {
+  const messagesContainerRef = useRef(null);
+
   const { allMessages, hideInit, showInit } = useGlobalContext();
+
+  useEffect(() => {
+    if (messagesContainerRef) {
+      messagesContainerRef.current.scrollTop =
+        messagesContainerRef.current.scrollHeight;
+    }
+  });
 
   const listMessages = () => {
     return allMessages.map((msg, index) => {
@@ -62,7 +71,7 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="messages">
+      <div className="messages" ref={messagesContainerRef}>
         {showInit ? (
           <Init click={hideInit} />
         ) : (
