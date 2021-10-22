@@ -69,7 +69,9 @@ const conversations = (option) => {
         content: "showtransactions",
         text: "Please select account",
         sender: "bot",
-        card: <AccoutDetailsCard content="recenttrans" />,
+        card: (
+          <AccoutDetailsCard content="recenttrans" textOnClick="XXXX-0123" />
+        ),
       };
       return message;
     case "recenttrans":

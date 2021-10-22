@@ -11,6 +11,7 @@ const Footer = () => {
 
   const addMessage = (e) => {
     if (e.key == "Enter") {
+      setCurrentMessage("");
       hideInit();
 
       if (e.target.value === "order cheque book") {
