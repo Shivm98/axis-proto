@@ -12,6 +12,21 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  transition: all 1s linear;
+
+  &.mini {
+    height: auto;
+    min-height: auto;
+
+    .body-container {
+      height: 0;
+
+      & > * {
+        height: 0;
+        display: none;
+      }
+    }
+  }
 
   .header-container {
     height: 5rem;
