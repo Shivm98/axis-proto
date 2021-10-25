@@ -5,11 +5,13 @@ import PaymentSummary from "../PaymentSummary/PaymentSummary";
 
 const PaymentSuccess = () => {
   return (
-    <div className="pay-sucess">
-      <div className="pay-sucess-icon">
-        <img src={PaySucess} alt="pay-success-icon" />
+    <div>
+      <div className="pay-sucess">
+        <div className="pay-sucess-icon">
+          <img src={PaySucess} alt="pay-success-icon" />
+        </div>
+        <div className="pay-sucess-text">Your Payment was successful!</div>
       </div>
-      <div className="pay-sucess-text">Your Payment was successful!</div>
       <PaymentSummary />
     </div>
   );
