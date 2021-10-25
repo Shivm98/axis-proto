@@ -35,7 +35,7 @@ const Footer = () => {
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "50,000") {
+      } else if (e.target.value === "50000") {
         addNewMessage({
           type: "message",
           content: "acctype",
@@ -56,7 +56,7 @@ const Footer = () => {
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "Rs. 5 Lakh") {
+      } else if (e.target.value === "50000") {
         addNewMessage({
           type: "message",
           content: "interesttime",
