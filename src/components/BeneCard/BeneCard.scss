@@ -2,6 +2,28 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  .rec-carousel-wrapper {
+    width: 90%;
+    .rec-arrow-left,
+    .rec-arrow-right {
+      border: none;
+      background: none;
+      box-shadow: none;
+      width: 10px !important;
+      min-width: 10px !important;
+    }
+
+    .rec-pagination {
+      display: none;
+    }
+
+    .jRFJkP:hover:enabled,
+    .jRFJkP:focus:enabled {
+      background: none;
+      box-shadow: none !important;
+    }
+  }
   .bene-card {
     background-color: #fff;
     padding: 1.2rem;

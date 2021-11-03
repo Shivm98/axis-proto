@@ -28,6 +28,7 @@
         .card-container {
           margin-left: 3rem;
           margin-top: 1rem;
+          width: 90%;
         }
       }
 
@@ -40,7 +41,7 @@
       }
 
       &.bot {
-        margin-right: auto;
+        // margin-right: auto;
 
         .text-content {
           display: flex;
