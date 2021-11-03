@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Init.scss";
 import banner from "../../assets/banner.png";
 import { useGlobalContext } from "../../context/context";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Init = ({ click }) => {
   const [quickLinks, selQuickLinks] = useState([
@@ -28,8 +30,12 @@ const Init = ({ click }) => {
       sender: "user",
     });
   };
+
+  const notify = () => toast("Wow so easy !");
   return (
     <div className="init">
+      <ToastContainer />
+      {/* <button onClick={notify}>Notify !</button> */}
       <div className="avatar"></div>
       <div className="text-content">
         <div className="title">Welcome to AXIS AHA!</div>

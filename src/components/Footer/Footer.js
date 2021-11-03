@@ -14,25 +14,26 @@ const Footer = () => {
       setCurrentMessage("");
       hideInit();
 
-      if (e.target.value === "order cheque book") {
+      if (e.target.value === "Order Cheque Book") {
         addNewMessage({
           type: "message",
           content: "orderchequebook",
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "show transactions") {
+      } else if (e.target.value === "Show Transactions") {
         addNewMessage({
           type: "message",
           content: "showtransactions",
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "fund transfer") {
+      } else if (e.target.value === "Fund Transfer") {
         addNewMessage({
           type: "message",
           content: "fundtransfer",
           text: e.target.value,
+
           sender: "user",
         });
       } else if (e.target.value === "50000") {
@@ -49,21 +50,21 @@ const Footer = () => {
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "book fd") {
+      } else if (e.target.value === "Book FD") {
         addNewMessage({
           type: "message",
           content: "selectfdplan",
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "50000") {
+      } else if (e.target.value === "10000") {
         addNewMessage({
           type: "message",
           content: "interesttime",
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "no") {
+      } else if (e.target.value === "No") {
         addNewMessage({
           type: "message",
           content: "fddetails",
@@ -77,7 +78,7 @@ const Footer = () => {
           text: e.target.value,
           sender: "user",
         });
-      } else if (e.target.value === "XXXXXXXXXX") {
+      } else if (e.target.value === "1122334455") {
         addNewMessage({
           type: "message",
           content: "paymentsucessemail",
@@ -101,6 +102,7 @@ const Footer = () => {
           }}
           value={currentMessage.text}
         />
+
         <img src={mic} alt="mic" />
       </div>
       <div className="lang-selector">

@@ -20,7 +20,7 @@ const conversations = (option) => {
         card: (
           <AccountType
             options={options}
-            textOnClick="saving account"
+            textOnClick="Saving Account"
             content="savingsaccount"
           />
         ),
@@ -35,7 +35,7 @@ const conversations = (option) => {
         sender: "bot",
         card: (
           <BeneCard
-            textOnClick="continue"
+            textOnClick="Continue"
             content="paymentsucess"
             title="Placeholder"
             subtitle="placeholder"
